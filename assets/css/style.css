@@ -115,7 +115,7 @@ ol {
 p {
      margin: 0px;
      font-weight: 300;
-     font-size: 15px;
+     font-size: 20px;
      line-height: 24px;
 }
 
@@ -259,6 +259,12 @@ button {
      font-size: 16px;
      line-height: 20px;
 }
+.navigation.navbar-dark .navbar-nav .nav-link2 {
+     padding: 0 25px;
+     color: rgb(255, 255, 255);
+     font-size: 16px;
+     line-height: 20px;
+}
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
@@ -269,10 +275,21 @@ button {
      color: rgb(238, 36, 36);
 }
 
+.navigation.navbar-dark .navbar-nav .nav-link2:focus,
+.navigation.navbar-dark .navbar-nav .nav-link2:hover {
+     color: rgb(61, 231, 217);
+}
+
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
 .navigation.navbar-dark .navbar-nav .nav-link.active,
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
+     color: rgb(255, 255, 255);
+}
+.navigation.navbar-dark .navbar-nav .active>.nav-link1,
+.navigation.navbar-dark .navbar-nav .nav-link1.active,
+.navigation.navbar-dark .navbar-nav .nav-link1.show,
+.navigation.navbar-dark .navbar-nav .show>.nav-link1 {
      color: rgb(255, 255, 255);
 }
 
@@ -935,5 +952,146 @@ button:disabled,
     opacity: 0.25;
 }
 
- 
+.msger {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: space-between;
+     width: 100%;
+     max-width: 386px;
+     margin: 25px 10px;
+     border-radius: 10px;
+     height: calc(100% - 100px);
+     background: var(--msger-bg);
+     box-shadow: 0 15px 15px -5px rgb(251, 251, 251);
+   }
+   .msger-header {
+     display: flex;
+     justify-content: center;
+     padding: 10px;
+     border-radius: 10px 10px 0px 0px;
+     background: rgb(27, 25, 25);
+     color: rgb(253, 253, 253);
+   }
+   .msger-header-title{
+     display: flex;
+     align-items: center;
+   }
+   .msger-header-title img{
+     height: 2.5rem;
+     width: auto;
+   }
+   .msger-header-title p{
+     letter-spacing: 1px;
+     font-size: 1.8rem;
+     font-weight: bold;
+   }
+   .msger-chat {
+     flex: 1;
+     overflow-y: auto;
+     padding: 10px;
+   }
+   .msger-chat::-webkit-scrollbar {
+     width: 6px;
+   }
+   .msger-chat::-webkit-scrollbar-track {
+     background: rgb(27, 25, 25);
+   }
+   .msger-chat::-webkit-scrollbar-thumb {
+     background: rgb(27, 25, 25);
+     border-radius: 10px;
+   }
+   .msg {
+     display: flex;
+     align-items: flex-end;
+     margin-bottom: 10px;
+   }
+   .msg:last-of-type {
+     margin: 0;
+   }
+   .msg-img {
+     width: 60px;
+     height: 60px;
+     margin-right: 10px;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     border-radius: 50%;
+   }
+   .msg-bubble {
+     max-width: 350px;
+     padding: 15px;
+     border-radius: 15px;
+     background: var(--left-msg-bg);
+   }
+   .msg-info {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   .msg-info-name {
+     margin-right: 10px;
+     font-weight: bold;
+   }
+   .msg-info-time {
+     font-size: 0.85em;
+   }
+   .left-msg .msg-bubble {
+     color: rgb(27, 25, 25);
+     border-bottom-left-radius: 0;
+   }
+   .right-msg {
+     flex-direction: row-reverse;
+   }
+   .right-msg .msg-bubble {
+     background: var(--right-msg-bg);
+     color: rgb(12, 12, 12);
+     border-bottom-right-radius: 0;
+   }
+   .right-msg .msg-img {
+     margin: 0 0 0 10px;
+   }
+   .msger-inputarea {
+     display: flex;
+     padding: 10px;
+     background: m;
+     border-radius: 0px 0px 10px 10px;
+   }
+   .msger-inputarea * {
+     padding: 5px;
+     border: none;
+     border-radius: 3px;
+     font-size: 1em;
+   }
+   .msger-input {
+     flex: 1;
+     background: transparent;
+     outline: none;
+     border: 1px solid rgb(248, 248, 248);
+     color: #fff;
+   }
+   .msger-send-btn {
+     margin-left: 10px;
+     background: transparent;
+     color: #fff;
+     font-size: 1.5rem;
+     cursor: pointer;
+   }
+   .msger-chat {
+     background-color: rgb(27, 25, 25);
+   }
+
+   @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+   :root {
+     --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+     --msger-bg: rgb(27, 25, 25);
+     --left-msg-bg: linear-gradient(to right, #f895b9, #f44183);
+     --right-msg-bg: #ececec;
+   }
+   *,
+   *:before,
+   *:after {
+     margin: 0;
+     padding: 0;
+     box-sizing: inherit;
+   }
  
